@@ -8,7 +8,29 @@ import NewEntryForm from './components/NewEntryForm';
 import EntryLines from './components/EntryLines';
 
 function App () {
+
   const [entries, setEntries] = useState (initialEntries);
+
+ 
+
+  function deleteEntry(id){
+    const result = entries.filter(entry => entry.id !== id);
+    setEntries(result);
+  }
+
+  function addEntry(description, value, isExpense){
+    const result = entries.concat({
+      id: entries.length+1, 
+      description, 
+      value,
+      isExpense
+    });
+    console.log('result', result);
+    console.log('entries', entries);
+    setEntries(result);
+  }
+
+
   return (
     <Container>
       <MainHeader title="Budget" type="h1" />
@@ -16,10 +38,10 @@ function App () {
       <DisplayBalances />
       <MainHeader title="History" type="h3" />
 
-      <EntryLines entries={entries}/>
+      <EntryLines entries={entries} deleteEntry={deleteEntry}/>
 
       <MainHeader title="Add new transaction"/>
-      <NewEntryForm />
+      <NewEntryForm addEntry={addEntry}/>
     </Container>
   );
 }
@@ -28,21 +50,26 @@ export default App;
 
 var initialEntries = [
   {
+
+    id: 1,
     description: 'Work Income',
     value: '$1,000.00',
     isExpense: false,
   },
   {
+    id: 2,
     description: 'Water Bill',
     value: '$20.00',
     isExpense: true,
   },
   {
+    id: 3,
     description: 'Rent',
     value: '$300.00',
     isExpense: true,
   },
   {
+    id: 4,
     description: 'Power Bill',
     value: '$50',
     isExpense: true,
