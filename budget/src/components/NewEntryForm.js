@@ -1,54 +1,33 @@
-import React, {useState} from 'react'
-import ButtonSaveOrCancel from './ButtonSaveOrCancel'
-import { Checkbox, Form, Segment } from 'semantic-ui-react'
+import React from 'react';
+import ButtonSaveOrCancel from './ButtonSaveOrCancel';
+import {Form} from 'semantic-ui-react';
+import EntryForm from './EntryForm';
 
-function NewEntryForm({addEntry}) {
-
-const [description, setDescription] = useState('');
-const [value,setValue] = useState('');
-const [isExpense, setIsExpense] = useState(true);
-
-    return (    
-
+function NewEntryForm({
+  addEntry,
+  description,
+  value,
+  isExpense,
+  setDescription,
+  setValue,
+  setIsExpense,
+}) {
+  return (
     <Form unstackable>
-        <Form.Group>
-          <Form.Input 
-            width={12} 
-            label='Description' 
-            icon='tags' 
-            placeholder='New shiny thing'
-            value={description}
-            onChange={(event) => setDescription(event.target.value)}
-            >
-            
-            </Form.Input>
-          <Form.Input 
-            width={4} 
-            label='Value' 
-            icon='dollar' 
-            iconPosition='left'
-            placeholder='100.00'
-            value={value}
-            onChange={(event) => setValue(event.target.value)}
-            >
-            </Form.Input>
-        </Form.Group>
-        <Segment compact>
-          <Checkbox 
-          toggle 
-          label='is expense' 
-          checked={isExpense}
-          onChange={() => setIsExpense(oldState => !oldState)}
-          />
-        </Segment>
-        <ButtonSaveOrCancel 
-          addEntry={addEntry} 
-          description={description} 
-          value={value}
-          isExpense={isExpense}
-          />
-      </Form>
-    )
+      <EntryForm
+        description={description}
+        value={value}
+        isExpense={isExpense}
+        setValue={setValue}
+        setDescription={setDescription}
+        setIsExpense={setIsExpense}
+      />
+
+      <ButtonSaveOrCancel
+        addEntry={addEntry}
+      />
+    </Form>
+  );
 }
 
-export default NewEntryForm
+export default NewEntryForm;
