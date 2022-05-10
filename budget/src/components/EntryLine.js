@@ -1,14 +1,14 @@
 import React, {Fragment} from 'react';
 import {Segment, Grid, Icon} from 'semantic-ui-react';
 import {useDispatch} from 'react-redux';
-import { removeEntryRedux } from '../actions/entries.actions';
+import {openEditModal} from '../actions/modals.actions';
+import {removeEntryRedux} from '../actions/entries.actions';
 
 function EntryLine({
   id,
   description,
   value,
   isExpense = false,
-  editEntry,
 }) {
   const dispatch = useDispatch ();
   return (
@@ -23,7 +23,9 @@ function EntryLine({
               {value}
             </Grid.Column>
             <Grid.Column width={3}>
-              <Icon name="edit" bordered onClick={() => editEntry (id)} />
+              <Icon name="edit" 
+              bordered 
+              onClick={() => dispatch(openEditModal(id))} />
               <Icon name="trash" bordered onClick={() => dispatch(removeEntryRedux(id))} />
             </Grid.Column>
           </Grid.Row>
