@@ -2,25 +2,39 @@
   "entries": [
     {
       "id": 1,
-      "description": "Work incomes",
+      "description": "Work incomes"
+    },
+    {
+      "id": 2,
+      "description": "Water Bill reduuux"
+    },
+    {
+      "id": 3,
+      "description": "Rent"
+    },
+    {
+      "id": 4,
+      "description": "Power Bill"
+    }
+  ],
+  "values": [
+    {
+      "id": 1,
       "value": 1000,
       "isExpense": false
     },
     {
       "id": 2,
-      "description": "Water Bill reduuux",
       "value": 20,
       "isExpense": true
     },
     {
       "id": 3,
-      "description": "Rent",
       "value": 300,
       "isExpense": true
     },
     {
       "id": 4,
-      "description": "Power Bill",
       "value": 50,
       "isExpense": true
     }
