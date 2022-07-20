@@ -1,42 +1,42 @@
 {
   "entries": [
     {
-      "id": 1,
-      "description": "Work incomes"
+      "id": "8f044fc7-973-4657-b880-f5ebfd4f85fd",
+      "description": "fgdfgdfg"
     },
     {
-      "id": 2,
-      "description": "Water Bill reduuux"
+      "id": "0bcd960b-5532-4e91-ad38-fc4c32ec38fb",
+      "description": "asdasd"
     },
     {
-      "id": 3,
-      "description": "Rent"
+      "id": "88f9dd98-be98-49b4-8344-b88a17b505ae",
+      "description": "asdas"
     },
     {
-      "id": 4,
-      "description": "Power Bill"
+      "id": "c460ce83-728c-42a6-85e7-1e3ece114787",
+      "description": "Another"
     }
   ],
   "values": [
     {
-      "id": 1,
-      "value": 1000,
-      "isExpense": false
-    },
-    {
-      "id": 2,
-      "value": 20,
-      "isExpense": true
-    },
-    {
-      "id": 3,
+      "id": "8f044fc7-973-4657-b880-f5ebfd4f85fd",
       "value": 300,
       "isExpense": true
     },
     {
-      "id": 4,
-      "value": 50,
-      "isExpense": true
+      "id": "0bcd960b-5532-4e91-ad38-fc4c32ec38fb",
+      "isExpense": true,
+      "value": "500"
+    },
+    {
+      "id": "88f9dd98-be98-49b4-8344-b88a17b505ae",
+      "isExpense": false,
+      "value": "600"
+    },
+    {
+      "id": "c460ce83-728c-42a6-85e7-1e3ece114787",
+      "isExpense": false,
+      "value": "700"
     }
   ]
 }
